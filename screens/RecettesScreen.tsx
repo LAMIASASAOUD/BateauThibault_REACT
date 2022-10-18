@@ -5,15 +5,15 @@ import CustomButton from '../components/CustomButton';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import navigation from '../navigation';
-import { RootTabScreenProps } from '../types';
+import { RootStackScreenProps, RootTabScreenProps } from '../types';
 
-export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'>) {
+export default function RestaurantsScreen({ navigation }: RootStackScreenProps<'Restaurants'>) {
 
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Nos bateaux partenaires </Text>
-      <Text>Tous les eaux mènent à Thibault</Text>
+      <Text style={styles.title}>Nos recettes </Text>
+      <Text>Toutes les recettes du bateau de Thibault</Text>
       <Text>06.63.99.99.78</Text>
       <Text>lebateaudethibault@gmail.com</Text>
       <Text>www.facebook.com/lebateaudethibault</Text>
@@ -26,9 +26,8 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
               style={styles.image}
             />
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'De la brise', image: require('../assets/images/poisson.png') })
-              // navigation.navigate('Details')
-            }>De la Brise</Pressable>
+              navigation.navigate('Details', { title: 'Homard', image: require('../assets/images/poisson.png') })
+            }>Homard</Pressable>
           </View>
 
           <View style={styles.button}>
@@ -36,8 +35,8 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
               source={require('../assets/images/poisson.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Saphir', image: require('../assets/images/poisson.png') })}>
-                Saphir
+              navigation.navigate('Details', { title: 'St Jacques', image: require('../assets/images/poisson.png') })}>
+                St Jacques
             </Pressable>
           </View>
 
@@ -50,8 +49,8 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
               source={require('../assets/images/poisson.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Gast Micher', image: require('../assets/images/poisson.png') })}>
-                Gast Micher
+              navigation.navigate('Details', { title: 'Bar', image: require('../assets/images/poisson.png') })}>
+                Bar
             </Pressable>
           </View>
 
@@ -60,17 +59,38 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
               source={require('../assets/images/poisson.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Aquilon', image: require('../assets/images/poisson.png') })}>
-                Aquilon
+              navigation.navigate('Details', { title: 'Tourteau', image: require('../assets/images/poisson.png') })}>
+                Tourteau
             </Pressable>
           </View>
       </View>
 
-      <View style={styles.row}>
-   {/* CONTACT */}
-         </View>
 
-    </View>
+      <View style={styles.row}>
+
+      <View style={styles.button}>
+            <Image
+              source={require('../assets/images/poisson.png')}
+              style={styles.image}/>
+            <Pressable onPress={() =>
+              navigation.navigate('Details', { title: 'Recette', image: require('../assets/images/poisson.png') })}>
+                Recette
+            </Pressable>
+          </View>
+
+          <View style={styles.button}>
+            <Image
+              source={require('../assets/images/poisson.png')}
+              style={styles.image}/>
+            <Pressable onPress={() =>
+              navigation.navigate('Details', { title: 'Recette', image: require('../assets/images/poisson.png') })}>
+                Recette
+            </Pressable>
+          </View>
+      </View>
+      </View>
+
+
   );
 }
 

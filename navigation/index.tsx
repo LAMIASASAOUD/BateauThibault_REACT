@@ -12,8 +12,12 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import DetailsScreen from '../screens/DetailsScreen';
+import BateauScreen from '../screens/DetailsScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import RecettesScreen from '../screens/RecettesScreen';
+import RestaurantsScreen from '../screens/RestaurantsScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
@@ -40,6 +44,10 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Bateaux" component={TabTwoScreen} />
+      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen name="Restaurants" component={RestaurantsScreen} />
+      <Stack.Screen name="Recettes" component={RecettesScreen} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
