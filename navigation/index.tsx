@@ -22,6 +22,8 @@ import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { Ionicons } from '@expo/vector-icons';
+import ProduitsScreen from '../screens/ProduitsScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -48,6 +50,9 @@ function RootNavigator() {
       <Stack.Screen name="Details" component={DetailsScreen} />
       <Stack.Screen name="Restaurants" component={RestaurantsScreen} />
       <Stack.Screen name="Recettes" component={RecettesScreen} />
+    
+      <Stack.Screen name="Produits" component={ProduitsScreen} />
+
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
@@ -82,12 +87,7 @@ function BottomTabNavigator() {
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
+   <Ionicons name="md-cart-outline" size={24} color="black" />
             </Pressable>
           ),
         })}

@@ -21,6 +21,7 @@ export type RootStackParamList = {
   Details:any;
   Restaurants:undefined;
   Recettes:undefined;
+  Produits:undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

@@ -22,21 +22,21 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
 
           <View style={styles.button}>
             <Image
-              source={require('../assets/images/poisson.png')}
+              source={require('../assets/images/icones/deLaBrise_icon.png')}
               style={styles.image}
             />
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'De la brise', image: require('../assets/images/poisson.png') })
+              navigation.navigate('Details', { title: 'De la brise', image: require('../assets/images/photos/deLaBrise.png') })
               // navigation.navigate('Details')
             }>De la Brise</Pressable>
           </View>
 
           <View style={styles.button}>
             <Image
-              source={require('../assets/images/poisson.png')}
+              source={require('../assets/images/icones/saphir_icon.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Saphir', image: require('../assets/images/poisson.png') })}>
+              navigation.navigate('Details', { title: 'Saphir', image: require('../assets/images/photos/saphir.png') })}>
                 Saphir
             </Pressable>
           </View>
@@ -47,20 +47,20 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'
         
       <View style={styles.button}>
             <Image
-              source={require('../assets/images/poisson.png')}
+              source={require('../assets/images/icones/gastMicher_icon.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Gast Micher', image: require('../assets/images/poisson.png') })}>
+              navigation.navigate('Details', { title: 'Gast Micher', image: require('../assets/images/photos/gastMicher.png') })}>
                 Gast Micher
             </Pressable>
           </View>
 
           <View style={styles.button}>
             <Image
-              source={require('../assets/images/poisson.png')}
+              source={require('../assets/images/icones/aquilon_icon.png')}
               style={styles.image}/>
             <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Aquilon', image: require('../assets/images/poisson.png') })}>
+              navigation.navigate('Details', { title: 'Aquilon', image: require('../assets/images/photos/aquilon.png') })}>
                 Aquilon
             </Pressable>
           </View>

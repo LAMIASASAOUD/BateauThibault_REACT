@@ -7,7 +7,7 @@ import { Text, View } from '../components/Themed';
 import navigation from '../navigation';
 import { RootStackScreenProps, RootTabScreenProps } from '../types';
 
-export default function RestaurantsScreen({ navigation }: RootStackScreenProps<'Restaurants'>) {
+export default function ProduitsScreen({ navigation }: RootStackScreenProps<'Produits'>) {
 
 
   return (
@@ -42,52 +42,7 @@ export default function RestaurantsScreen({ navigation }: RootStackScreenProps<'
 
       </View>
 
-      <View style={styles.row}>
-        
-      <View style={styles.button}>
-            <Image
-              source={require('../assets/images/icones/barRecette_icon.png')}
-              style={styles.image}/>
-            <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Bar', image: require('../assets/images/photos/barRecette.png') })}>
-                Bar
-            </Pressable>
-          </View>
-
-          <View style={styles.button}>
-            <Image
-              source={require('../assets/images/icones/poisson.png')}
-              style={styles.image}/>
-            <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Tourteau', image: require('../assets/images/icones/poisson.png') })}>
-                Tourteau
-            </Pressable>
-          </View>
-      </View>
-
-
-      <View style={styles.row}>
-
-      <View style={styles.button}>
-            <Image
-              source={require('../assets/images/icones/poisson.png')}
-              style={styles.image}/>
-            <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Recette', image: require('../assets/images/icones/poisson.png') })}>
-                Recette
-            </Pressable>
-          </View>
-
-          <View style={styles.button}>
-            <Image
-              source={require('../assets/images/icones/poisson.png')}
-              style={styles.image}/>
-            <Pressable onPress={() =>
-              navigation.navigate('Details', { title: 'Recette', image: require('../assets/images/icones/poisson.png') })}>
-                Recette
-            </Pressable>
-          </View>
-      </View>
+      
       </View>
 
 

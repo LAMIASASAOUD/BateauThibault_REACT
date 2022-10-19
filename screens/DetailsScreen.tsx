@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, Dimensions } from 'react-native';
 import CustomButton from '../components/CustomButton';
 
 import EditScreenInfo from '../components/EditScreenInfo';
@@ -21,7 +21,18 @@ export default function DetailsScreen({ navigation, route }) {
       style={styles.image}
     />
           <Text>XXXYYYZZZ</Text>
-      <Text>Qu'il est chaud le soleil ...</Text>
+      <Text>Qu'il est chaud le soleil <br></br>
+            quand nous sommes en vacances<br></br>
+            Y a d'la joie, des hirondelles<br></br>
+            C'est le sud de la France<br></br>
+            Papa bricole au garage<br></br>
+            Maman lit dans la chaise longue<br></br>
+            Dans ce joli paysage<br></br>
+            Moi, je me balde en tongs<br></br>
+            <br></br><br></br>
+            Que de bonheur!<br></br>
+            Que de bonheur!<br></br>
+      </Text>
 </View>
   );
 }
@@ -36,19 +47,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
   row:{
     flexDirection: 'row',
 
   },
   image: {
     position: 'relative',
-    height: 50,
-    width: 50,
+    height: 250,
+    width: 300,
 
   },
 });

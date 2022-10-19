@@ -16,10 +16,18 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       <Text>lebateaudethibault@gmail.com</Text>
       <Text>www.facebook.com/lebateaudethibault</Text>
 
+      <View style={styles.button}>
+        <Image
+          source={require('../assets/images/icones/poisson.png')}
+          style={styles.image}
+        />
+        <Pressable     onPress={() =>
+        navigation.navigate('Produits')
+      }>Produits et promotions</Pressable>
+       </View>
 
 
-
-      <CustomButton img="../assets/images/poisson.png" text="Produits et promotions"/>
+      {/* <CustomButton img="../assets/images/icones/poisson.png" text="Produits et promotions"/> */}
 
 
 
@@ -29,7 +37,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
       <View style={styles.button}>
         <Image
-          source={require('../assets/images/poisson.png')}
+          source={require('../assets/images/icones/ancre.png')}
           style={styles.image}
         />
         <Pressable     onPress={() =>
@@ -41,7 +49,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
       <View style={styles.button}>
         <Image
-          source={require('../assets/images/poisson.png')}
+          source={require('../assets/images/icones/restaurant.png')}
           style={styles.image}
         />
         <Pressable onPress={() =>
@@ -56,21 +64,24 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
       <View style={styles.button}>
         <Image
-          source={require('../assets/images/poisson.png')}
+          source={require('../assets/images/icones/recette.png')}
           style={styles.image}
         />
-        <Pressable onPress={() =>
-        navigation.navigate('Recettes')
-      }>Recettes</Pressable>
+            <Pressable onPress={() =>
+              navigation.navigate('Recettes') }>
+                Recettes
+            </Pressable>
        </View>
 
       <View style={styles.button}>
         <Image
-          source={require('../assets/images/poisson.png')}
+          source={require('../assets/images/icones/tourteau.png')}
           style={styles.image}
         />
-        <Pressable>Contact</Pressable>
-       </View>
+           <Pressable onPress={() =>
+              navigation.navigate('Details', { title: 'Le bateau de Thibault', image: require('../assets/images/photos/TIG.png') })}>
+                Contact
+            </Pressable>       </View>
 </View>
 
 
